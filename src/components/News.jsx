@@ -3,6 +3,7 @@ import axios from "axios";
 import NewsList from "./NewsList";
 import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
+import "./News.css";
 
 const url = import.meta.env.VITE_NEWS_API_KEY;
 
@@ -22,14 +23,16 @@ const News = () => {
   const id = nanoid();
 
   return (
-    <div>
+    <div className="news-container">
+      <h1>news</h1>
       {news.map((story) => {
-        const { title, content, link } = story;
+        const { title, content, link, image_url } = story;
         return (
           <NewsList
             title={title}
             link={link}
             content={content}
+            image_url={image_url}
             key={nanoid()}
           />
         );
