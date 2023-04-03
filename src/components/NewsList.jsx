@@ -7,7 +7,7 @@ const NewsList = ({ title, link, content, image_url }) => {
   console.log(content.substring(0, 10));
   return (
     <div>
-      <main>
+      <main className="news-card">
         <h2>{title}</h2>
         <img src={image_url ? image_url : img1} alt={title} />
         <p>
@@ -20,7 +20,9 @@ const NewsList = ({ title, link, content, image_url }) => {
             {readMore ? "show less" : "show more"}
           </button>{" "}
         </p>
-        <a href={link}>{link}</a>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          Visit Site
+        </a>
       </main>
     </div>
   );
