@@ -6,11 +6,9 @@ import { useState, useEffect } from "react";
 import "./News.css";
 
 const url = import.meta.env.VITE_NEWS_API_KEY;
-// create the same as above but use the politics API and change variable name
 
 const News = () => {
   const [news, setNews] = useState([]);
-  // create a new state [politics, setPolitics] = useState([])
 
   useEffect(() => {
     axios
@@ -20,20 +18,10 @@ const News = () => {
         console.log(res.data);
       })
       .catch((err) => console.log("error", err));
-
-    //   axios
-    //   .get(POLITICS URL)
-    //   .then((res) => {
-    //     setNews(res.data.results);
-    //     console.log(res.data);
-    //   })
-    //   .catch((err) => console.log("error", err));
   }, []);
 
   const id = nanoid();
-  // BELOW NEED TO ADD REACT ROUTER DOM INCLUDE A HOME AND POLITICS PAGE
-  // CREATE IT AS A <UL> THEN <LI> USE THE <NAV> EXPRESSION
-  // INCLUDE ROUTE AND SWITCH?
+
   return (
     <div className="news-container">
       <h1>news</h1>

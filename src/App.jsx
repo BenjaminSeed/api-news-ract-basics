@@ -13,7 +13,6 @@ function App() {
         <Route path="/" element={<News />} />
         <Route path="/bbc" element={<BbcNews />} />
         <Route path="/UsNews" element={<UsNews />} />
-        {/* <News /> */}
       </Routes>
     </div>
   );
