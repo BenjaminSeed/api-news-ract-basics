@@ -24,7 +24,7 @@ main {
 
 @media (max-width: 767px) {
   main {
-    max-width: 100%;
+    max-width: auto;
   }
 }
 

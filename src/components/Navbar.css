@@ -1,11 +1,13 @@
 .navbar {
+  position: absolute;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0;
 }
 
 .navbar ul {
+  position: absolute;
   display: flex;
   gap: 2rem;
   margin: 0;
@@ -13,18 +15,67 @@
   list-style: none;
 }
 
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    left: 5.3rem;
+    top: -1.4rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .navbar li {
+    margin: 1rem;
+  }
+
+  .navbar li a {
+    font-size: 1.2rem;
+  }
+}
+
 .navbar li {
   margin: 0 2rem;
+  margin-left: 16.5rem;
+  /* left: 100%;
+  transform: translateX(-50%); */
 }
 
 .navbar li a {
   display: block;
   font-size: 1.4rem;
   color: #666;
+  text-transform: capitalize;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
 .navbar li a:hover {
   color: #0077ff;
+  padding-top: 1.5rem;
+  transition: 0.2s;
+}
+
+.navbar-btn {
+  margin-left: auto;
+  position: absolute;
+  background: transparent;
+  background-color: transparent;
+  /* background-color: #0077ff; */
+  color: #0077ff;
+  padding: 0;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.navbar-btn:hover {
+  /* background-color: #0055cc; */
+  transform: rotate(90deg);
+  transition: 0.4s;
 }
