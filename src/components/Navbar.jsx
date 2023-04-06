@@ -4,13 +4,13 @@ import { FaBars } from "react-icons/fa";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(false);
+  const [showLinks, setShowLinks] = useState(true);
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
   return (
-    <nav>
+    <nav className="nav-container">
       {showLinks && (
         <div className="navbar">
           <ul>

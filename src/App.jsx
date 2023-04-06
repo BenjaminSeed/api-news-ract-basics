@@ -4,6 +4,7 @@ import News from "./components/News";
 import { Route, Routes } from "react-router-dom";
 import BbcNews from "./components/BbcNews";
 import UsNews from "./components/UsNews";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/bbc" element={<BbcNews />} />
         <Route path="/UsNews" element={<UsNews />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
