@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="nav-container">
       {showLinks && (
         <div className="navbar">
-          <ul>
+          <ul className="nav-links">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -28,10 +28,10 @@ const Navbar = () => {
           </ul>
         </div>
       )}
-
+      {/* 
       <button className="navbar-btn" onClick={toggleLinks}>
         <FaBars />
-      </button>
+      </button> */}
     </nav>
   );
 };

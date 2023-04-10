@@ -10,7 +10,11 @@ const BbcNews = ({ title, link, description, image_url }) => {
     <div>
       <main className="news-container">
         <h2>{title}</h2>
-        <img src={image_url ? image_url : img2} alt={title} />
+        <img
+          src={image_url ? image_url : img2}
+          alt={title}
+          className="bbc-img"
+        />
         <p>
           {readMore ? description : `${description.substring(0, 200)}...`}{" "}
           <button

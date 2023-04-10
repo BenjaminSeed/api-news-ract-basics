@@ -9,7 +9,11 @@ const NewsList = ({ title, link, content, image_url }) => {
     <div>
       <main className="news-card">
         <h2>{title}</h2>
-        <img src={image_url ? image_url : img1} alt={title} />
+        <img
+          src={image_url ? image_url : img1}
+          alt={title}
+          className="news-image"
+        />
         <p>
           {readMore ? content : `${content.substring(0, 200)}...`}{" "}
           <button
